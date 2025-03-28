@@ -50,4 +50,4 @@ var drawName = function(){
     text(yourName, textX, textY);
     }
     
-    var cloudY
+    
