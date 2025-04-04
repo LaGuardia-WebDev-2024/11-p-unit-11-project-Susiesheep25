@@ -1,7 +1,9 @@
 var flowerX = [];
 var rainY = [];
-var birdY = [50, 120, 30, 50];
-var myRain=[]
+var birdY = [];
+var myRain=[];
+
+var happyImage = loadImage("https://static.vecteezy.com/system/resources/previews/027/129/357/non_2x/a-cartoon-sun-with-a-smile-on-it-isolated-on-transparent-background-png.png");
 
 setup = function() {
    size(600, 450); 
@@ -17,6 +19,10 @@ setup = function() {
    for(var i=0; i<20; i++){
    myRain.push(random(0, 600));
     rainY.push (random(0,600));
+    }
+    
+    for(var i=0; i<10; i++){
+   birdY.push(random(0, 600));
    }
   
    for(var i = 0; i < flowerX.length; i++){
@@ -33,9 +39,18 @@ setup = function() {
    }
    
    
-   drawName();
-  
+  for(var i = 0; i < birdY.length; i++){
+   text("🐦", birdY[i], random(100,150)); 
    
+   }
+   
+   draw=function(){
+   image(happyImage, 0, 0, 100,100);
+   }
+   
+   
+   drawName();
+     
    
 
 }
